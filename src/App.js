@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+
+import DLApp from './components/DLApp';
+import TWApp from './components//TWApp';
+
+const dl_data = require('./assets/data/dl_data.json');
+const tw_data = require('./assets/data/tw_data.json');
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DLApp dl_data={dl_data} />
+      <TWApp tw_data={tw_data} />
     </div>
   );
 }

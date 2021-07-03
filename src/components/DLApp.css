@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+:root {
+    --li-background: #7E8B92;/*#113F67;*/
+}
+
+.dl_app {
+    margin: 2rem auto; padding: auto;
+    width: 100%; height: fit-content;
+}
+.dl_app .dl-container {
+    border: solid 1.2px black;
+    border-radius: .8rem;
+    margin: 2rem auto; padding: .8rem;
+    width: fit-content; height: fit-content;
+}
+.dl_app .dl-container ul {
+    margin: 0; padding: 0;
+    list-style: none;
+}
+.dl_app .dl-container ul li {
+    border-radius: .2rem;
+    margin: .8rem auto; padding: .8rem 2rem;
+    background: var(--li-background);
+    color: #fff;
+    font-family: 'Bitter', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    opacity: 1;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.dl_app .dl-container ul li.dragging {
+    opacity: .6;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
