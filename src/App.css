@@ -1,0 +1,17 @@
+.app-break-container {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.app-break {
+    border-bottom: solid .1rem var(--ul-background);
+    border-right: solid .1rem var(--ul-background);
+    box-shadow: -.1rem 0 1rem var(--ul-background);
+    background: var(--ul-background-semi-transparent);
+    margin: .2rem;
+    width: 10px; height: 10px;
+    transform: rotate(45deg);
+}

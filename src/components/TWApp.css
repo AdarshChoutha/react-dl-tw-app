@@ -1,3 +1,96 @@
-.tw_app {
-    border: solid 2px black;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+:root {
+    --text: #102030;
 }
+
+.tw_app {
+    margin: 2rem auto; padding: auto;
+    width: 100%; height: fit-content;
+}
+.tw_app h1 {
+    margin: auto; padding: 0;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+.tw_app .text-container {
+    margin: 2rem; padding: 1rem 2rem;
+}
+.tw_app .text-container h3 {
+    border-radius: .2rem;
+    margin: .8rem 0; padding: .8rem 2rem;
+    box-shadow: 0 0 1rem var(--li-background);
+    background: var(--li-background);
+    width: fit-content;
+    color: #E6E6FA;
+    /* margin: 0; padding: .8rem; */
+    text-align: left;
+}
+.tw_app .text-container p {
+    border: solid .2rem var(--ul-background);
+    box-shadow: 0 0 .8rem var(--ul-background);
+    border-radius: .8rem;
+    margin: 0; padding: .8rem 2rem;
+    max-height: 50vh;
+    background: var(--ul-background-semi-transparent);
+    color: var(--text);
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6rem;
+}
+.tw_app .text-container p::-webkit-scrollbar {
+    display: none;
+}
+.tw_app .feedback-container {
+    margin: 2rem 4rem; padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tw_app .feedback-container .score-container,
+.tw_app .feedback-container .error-count-container,
+.tw_app .feedback-container .timer-container {
+    border: solid .2rem var(--ul-background);
+    box-shadow: 0 0 .8rem var(--ul-background);
+    margin: auto; padding: 1rem;
+    border-radius: .4rem;
+    background: var(--ul-background-semi-transparent);
+    min-height: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    transform: skew(30deg);
+}
+.tw_app .feedback-container .score-container p,
+.tw_app .feedback-container .error-count-container p,
+.tw_app .feedback-container .timer-container p {
+    margin: .4rem .6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transform: skew(-30deg);
+}
+.tw_app .input-text-container {
+    margin: 2rem; padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tw_app .input-text-container textarea {
+    border: solid .2rem var(--ul-background);
+    box-shadow: 0 0 .8rem var(--ul-background);
+    border-radius: .8rem;
+    margin: auto; padding: .8rem 2rem;
+    width: 100%; min-height: 10vh; max-height: 50vh;
+    background: var(--ul-background-semi-transparent);
+    color: var(--text);
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6rem;
+    resize: vertical;
+}
+.tw_app .input-text-container textarea::-webkit-scrollbar {
+    display: none;
+}
+

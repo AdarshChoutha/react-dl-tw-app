@@ -1,17 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Serif:wght@700&display=swap');
 :root {
-    --li-background: #7E8B92;/*#113F67;*/
+    --li-background: #7E8B92;
+    --ul-background: #5F9EA0;
+    --ul-background-semi-transparent: #5F9EA022;
 }
 
 .dl_app {
     margin: 2rem auto; padding: auto;
     width: 100%; height: fit-content;
 }
+.dl_app h1 {
+    margin: auto;
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+}
 .dl_app .dl-container {
-    border: solid 1.2px black;
+    border: solid .2rem var(--ul-background);
+    box-shadow: 0 0 .8rem var(--ul-background);
     border-radius: .8rem;
-    margin: 2rem auto; padding: .8rem;
+    margin: 2rem auto; padding: 0.8rem 1.2rem;
     width: fit-content; height: fit-content;
+    background: var(--ul-background-semi-transparent);
 }
 .dl_app .dl-container ul {
     margin: 0; padding: 0;
@@ -20,7 +29,10 @@
 .dl_app .dl-container ul li {
     border-radius: .2rem;
     margin: .8rem auto; padding: .8rem 2rem;
+    box-shadow: 0 0 1rem var(--li-background);
     background: var(--li-background);
+    max-width: 74vw;
+    overflow-wrap: normal;
     color: #fff;
     font-family: 'Bitter', serif;
     font-size: 1.6rem;

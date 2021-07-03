@@ -7,12 +7,21 @@ const dl_data = require('./assets/data/dl_data.json');
 const tw_data = require('./assets/data/tw_data.json');
 
 function App() {
-  return (
-    <div className="App">
-      <DLApp dl_data={dl_data} />
-      <TWApp tw_data={tw_data} />
-    </div>
-  );
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelector('.app-break-container').innerHTML = "";
+		for (let k = 1; k <= window.innerWidth / 16; k++) {
+			console.log(window.innerWidth);
+			// console.log(document.querySelector('.app-break-container'));
+			document.querySelector('.app-break-container').innerHTML += '<div class="app-break"></div>';
+		}
+	})
+	return (
+		<div className="App">
+			<DLApp dl_data={dl_data} />
+			<div className="app-break-container"></div>
+			<TWApp tw_data={tw_data} />
+		</div>
+	);
 }
 
 export default App;
