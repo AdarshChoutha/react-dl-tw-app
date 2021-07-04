@@ -10,8 +10,6 @@ function App() {
 	document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.app-break-container').innerHTML = "";
 		for (let k = 1; k <= window.innerWidth / 16; k++) {
-			console.log(window.innerWidth);
-			// console.log(document.querySelector('.app-break-container'));
 			document.querySelector('.app-break-container').innerHTML += '<div class="app-break"></div>';
 		}
 	})

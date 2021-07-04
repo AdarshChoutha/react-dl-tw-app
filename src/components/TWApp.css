@@ -93,4 +93,7 @@
 .tw_app .input-text-container textarea::-webkit-scrollbar {
     display: none;
 }
+.tw_app .input-text-container textarea:focus {
+    outline: none;
+}
 

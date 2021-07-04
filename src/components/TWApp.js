@@ -9,24 +9,26 @@ function TWApp({ tw_data }) {
 
     const [WPM, setWPM] = useState(0);
     const [ErrorCount, setErrorCount] = useState(0);
-    const [TimerCount, setTimerCount] = useState('00 : 00');
+    const [TimerCount, setTimerCount] = useState('0000');
 
     const words = tw_data.split(' ');
 
     function startTimer() {
         if (document.getElementById('input-text').classList.contains('firstTime')) {
             document.getElementById('input-text').classList.remove('firstTime');
-            setInterval(() => {
+            let timerInterval = setInterval(() => {
+                setData();
                 if ((time.sec + 1) >= 60) {
                     time.min++;
                     time.sec = 0;
                 } else { time.sec++ }
-                if (time.min < 10) {
-                    if (time.sec < 10) setTimerCount(`0${time.min} : 0${time.sec}`);
-                    else setTimerCount(`0${time.min} : ${time.sec}`);
-                } else {
-                    if (time.sec < 10) setTimerCount(`0${time.min} : 0${time.sec}`);
-                    else setTimerCount(`0${time.min} : ${time.sec}`);
+                setTimerCount(
+                    `${time.min.toLocaleString('en-US', { minimumIntegerDigits: 2 })}${time.sec.toLocaleString('en-US', { minimumIntegerDigits: 2 })}`
+                );
+                if (time.min === 1 && time.sec === 0) {
+                    console.log("Time's Up");
+                    clearInterval(timerInterval);
+                    document.getElementById('input-text').disabled = true;
                 }
             }, 1000)
         }
@@ -42,7 +44,6 @@ function TWApp({ tw_data }) {
         // Counting no of Words Typed
         let numberOfTypedWords = inputWords.length;
         totalInputWords += numberOfTypedWords;
-        console.log(time);
         let wpm = (totalInputWords / 5) / (time.min + time.sec / 60);
         setWPM(isNaN(wpm) ? 0 : wpm);
         inputWords.forEach(inputWord => {
@@ -59,12 +60,14 @@ function TWApp({ tw_data }) {
                 <p onCopy={() => { return false }} onCut={() => { return false }} onPaste={() => { return false }}>{tw_data}</p>
             </div>
             <div className="feedback-container">
-                <div className="score-container"><p>Words per Minute: {parseInt(WPM)}</p></div>
-                <div className="error-count-container"><p>Number of Errors: {ErrorCount}</p></div>
-                <div className="timer-container"><p>Time: {TimerCount}</p></div>
+                <div className="score-container"><p>Words / Minute: {isNaN(parseInt(WPM)) ? 0 : parseInt(WPM)}</p></div>
+                <div className="error-count-container"><p>Errors: {ErrorCount}</p></div>
+                <div className="timer-container"><p>
+                    Time: {TimerCount[0]}{TimerCount[1]}&nbsp;:&nbsp;{TimerCount[2]}{TimerCount[3]}
+                </p></div>
             </div>
             <div className="input-text-container">
-                <textarea id="input-text" className="firstTime" type="text" onChange={setData}
+                <textarea id="input-text" className="firstTime" type="text" disabled={false} onChange={setData}
                     onCopy={() => { return false }} onCut={() => { return false }} onPaste={() => { return false }} />
             </div>
         </div >
