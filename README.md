@@ -18,4 +18,4 @@ arc/assets/data/tw_data.json
 
 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque iusto eveniet illo iure ipsam fuga, deserunt quaerat unde numquam, atque exercitationem eum ea id odio et! Tempora, deleniti maxime."
 
-Edit this data to edit the list items in the app
+Edit this data to get your typing speed, mistakes
