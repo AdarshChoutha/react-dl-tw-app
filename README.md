@@ -1,3 +1,6 @@
+# Hosted App
+App is hosted on gh-pages Link - https://adarshchoutha.github.io/react-dl-tw-app/
+
 # Drag and Drop App
 
 arc/assets/data/dl_data.json
