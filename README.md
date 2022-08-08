@@ -3,8 +3,6 @@ App is hosted on gh-pages Link - https://adarshchoutha.github.io/react-dl-tw-app
 
 # Drag and Drop App
 
-arc/assets/data/dl_data.json
-
 [
     "List 1",
     "List 2",
@@ -16,8 +14,6 @@ arc/assets/data/dl_data.json
 Edit this list to edit the list items in the app
 
 # Typewritter App
-
-arc/assets/data/tw_data.json
 
 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque iusto eveniet illo iure ipsam fuga, deserunt quaerat unde numquam, atque exercitationem eum ea id odio et! Tempora, deleniti maxime."
 
